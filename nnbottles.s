@@ -34,7 +34,8 @@ arg byte cnt
 begin
 put "Take one down and pass it around, "
 printbottletext cnt, 0
-put "on the wall.", nl
+put " on the wall.", nl
+put nl
 end
 
 begin
