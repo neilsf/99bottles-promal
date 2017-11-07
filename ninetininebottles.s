@@ -5,14 +5,14 @@ byte bottlescount
 
 proc printbottletext
 arg byte cnt
-arg byte iscaptial
+arg byte iscapital
 begin
 if cnt = 0
   if iscapital = 0
     put "no "
   else
     put "No "
-  put "more "
+  put "more bottles"
 else
   output "#W bottle", cnt
   if cnt > 1
@@ -24,7 +24,7 @@ proc printoddline
 arg byte cnt
 begin
 printbottletext cnt, 1
-put "on the wall, "
+put " on the wall, "
 printbottletext cnt, 0
 put ".", nl
 end
@@ -47,7 +47,7 @@ while bottlescount > 0
 
 printoddline bottlescount
 put "Go to the store and buy some more, "
-printbottletext 99
+printbottletext 99, 0
 put "on the wall.", nl
 
 end
